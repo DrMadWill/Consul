@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>DrMadWiill.Consul</Title>
+    <Authors>DrMadWill</Authors>
+    <Company>DrMadWill</Company>
+    <Copyright>All</Copyright>
+    <PackageProjectUrl>https://github.com/DrMadWill/Consul</PackageProjectUrl>
+    <PackageIcon>Dr.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/DrMadWill/Consul</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Consul Helper</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\Dr.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Consul" Version="1.7.14.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting.Server.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="8.0.0" />
+  </ItemGroup>
+
+</Project>
