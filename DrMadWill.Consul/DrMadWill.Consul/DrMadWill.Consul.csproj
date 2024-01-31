@@ -15,6 +15,7 @@
     <RepositoryUrl>https://github.com/DrMadWill/Consul</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>Consul Helper</PackageTags>
+    <Version>2.2</Version>
   </PropertyGroup>
 
   <ItemGroup>

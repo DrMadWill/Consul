@@ -3,8 +3,20 @@ version: "3.8"
 services:
   s_consul:
     container_name: c_consul
-    image: consul
+    image: consul:1.8.3
     ports:
       - "8500:8500" 
       - "8600:8600/tcp" 
-      - "8600:8600/udp" 
+      - "8600:8600/udp"
+    networks: 
+      - mdms-internal
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8500/v1/status/leader || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+networks:
+  mdms-internal:
+    external: true
